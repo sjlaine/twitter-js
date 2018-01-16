@@ -24,8 +24,9 @@
       <!-- display tweets here -->
       {% for tweet in tweets %}
       <div class = 'tweetbox'>
-        <li class = 'user'><b>{{tweet.name}}</b></li>
-        <li class = 'usertweet'>{{tweet.content}}</li><br>
+        <!-- <li class = 'user'><b>{{tweet.name}}</b></li>
+        <li class = 'usertweet'>{{tweet.content}}</li><br> -->
+        <li><a href="/users/{{tweet.name}}">{{tweet.name}}</a> - {{tweet.content}}</li>
         </div>
       {% endfor %}
 
