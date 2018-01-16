@@ -41,9 +41,9 @@ code {
   font-size: 80%;
 }
 
-.tweetbox {
+./*tweetbox {
   padding: 7px;
-}
+}*/
 
 .tweetbox img {
   float: left;
@@ -57,3 +57,11 @@ code {
 .content .by {
   font-weight: bold;
 }
+
+.user {
+
+}
+.usertweet {
+
+}
+

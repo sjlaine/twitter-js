@@ -20,9 +20,13 @@
     </div>
     <div class="col-md-9">
 
+
       <!-- display tweets here -->
       {% for tweet in tweets %}
-        <li>{{tweet.content}}</li>
+      <div class = 'tweetbox'>
+        <li class = 'user'><b>{{tweet.name}}</b></li>
+        <li class = 'usertweet'>{{tweet.content}}</li><br>
+        </div>
       {% endfor %}
 
     </div>
