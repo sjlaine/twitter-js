@@ -8,4 +8,11 @@ router.get('/', function (req, res) {
   res.render( 'index', { tweets: tweets } );
 });
 
+// router.get('/stylesheets/style.css', function(req, res) {
+//   res.sendFile('/Users/sarahlaine/Desktop/Fullstack/twitter-js/public/stylesheets/style.css');
+// })
+
+router.use(express.static('public'));
+
 module.exports = router;
+
