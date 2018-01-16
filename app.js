@@ -1,5 +1,6 @@
-const express = require( 'express' );
-const volleyball = require( 'volleyball' );
+const express = require('express');
+const volleyball = require('volleyball');
+const nunjucks = require('nunjucks');
 const app = express(); // creates an instance of an express application
 app.listen(3000);
 
@@ -14,3 +15,18 @@ app.listen(3000);
 // })
 
 app.use(volleyball);
+const data = {
+  title: 'testTitle',
+  people: [{ name: 'Aaron' },
+  { name: 'Sarah' }
+  ]
+};
+// nunjucks.configure('views');
+// nunjucks.render('index.html', data, (err, render)=>{if (err) throw err
+//   process.stdout.write(render + '\n')});
+
+app.set('view engine', 'html'); // have res.render work with html files
+app.engine('html', nunjucks.render); // when giving html files to res.render, tell it to use nunjucks
+nunjucks.configure('views', { noCache: true });
+
+app.get('/',(req,res) =>{res.render('index.html', data)})
