@@ -3,9 +3,14 @@ const volleyball = require('volleyball');
 const nunjucks = require('nunjucks');
 const routes = require('./routes');
 const app = express(); // creates an instance of an express application
+const bodyParser = require('body-parser');
+
 app.listen(3000);
 app.use('/', routes);
 app.use(volleyball);
+
+app.use(bodyParser.urlencoded({ extended: true}));
+app.use(bodyParser.json());
 
 
 // app.use((req, res, next) => {

@@ -41,27 +41,34 @@ code {
   font-size: 80%;
 }
 
-./*tweetbox {
-  padding: 7px;
-}*/
+#submit_btn {
+    margin-top: 10px;
+}
 
 .tweetbox img {
   float: left;
-  height: 48px;
-  width: 48px;
+  height: 30px;
+  width: auto;
   content:url("http://lorempixel.com/48/48");
 }
+
+.tweetbox {
+  padding: 15px;
+  position: relative;
+  left: 40px;
+  top: 5px;
+}
+
 .content {
-  margin-left: 60px;
+
 }
 .content .by {
   font-weight: bold;
 }
 
-.user {
-
+li {
+  padding-left: 50px;
 }
-.usertweet {
 
-}
+
 
